@@ -1,0 +1,5 @@
+{
+    "collection_name": "test_collection",
+    "data_path": "data/sample_data.json",
+    "batch_size": 100
+}

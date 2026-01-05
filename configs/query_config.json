@@ -1,0 +1,72 @@
+{
+    "collection_name": "test_collection",
+    "queries": [
+        {
+            "name": "basic_dense_search",
+            "vector": [
+                0.1,
+                0.2,
+                0.3,
+                0.4
+            ],
+            "limit": 5
+        },
+        {
+            "name": "filter_search",
+            "vector": [
+                0.1,
+                0.2,
+                0.3,
+                0.4
+            ],
+            "filter": {
+                "must": [
+                    {
+                        "key": "category",
+                        "match": {
+                            "value": "electronics"
+                        }
+                    }
+                ]
+            },
+            "limit": 5
+        },
+        {
+            "name": "range_filter_search",
+            "vector": [
+                0.1,
+                0.2,
+                0.3,
+                0.4
+            ],
+            "filter": {
+                "must": [
+                    {
+                        "key": "price",
+                        "range": {
+                            "gt": 100
+                        }
+                    }
+                ]
+            },
+            "limit": 5
+        },
+        {
+            "name": "sparse_search",
+            "sparse_vector": {
+                "name": "sparse-text",
+                "vector": {
+                    "indices": [
+                        1,
+                        10
+                    ],
+                    "values": [
+                        0.5,
+                        0.5
+                    ]
+                }
+            },
+            "limit": 5
+        }
+    ]
+}

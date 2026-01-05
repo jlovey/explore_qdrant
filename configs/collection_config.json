@@ -1,0 +1,11 @@
+{
+    "collection_name": "test_collection",
+    "vector_config": {
+        "size": 4,
+        "distance": "COSINE"
+    },
+    "sparse_config": {
+        "name": "sparse-text",
+        "on_disk": false
+    }
+}
